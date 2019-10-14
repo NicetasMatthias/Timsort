@@ -23,12 +23,12 @@ int main()
     cin >> N; //считываем сколько элементов должно быть в массиве
     arr = new int [N]; //выделяем память под нужное количество элементов
     srand(static_cast<unsigned int>(time(nullptr))); //сбрасываем рандом временем
+    cout << "Unsorted array:" << endl;
     for (int i = 0; i < N; i++)
     {
         arr[i]=rand(); //заполняем рандомом
-        cout << arr[i] << "|";
+        cout << arr[i] << "\t";
     }
-    cout <<"\n\n";
     minrun=minRunLength(N);
     //тут начинаем работать с массивом
     while (current_index<N) //тут мы разбиваем массив на подмассивы
@@ -70,6 +70,13 @@ int main()
         current_index++;
 
     }
+
+    cout << "\n\nArray with sorted runs:" << endl;
+    for (int i = 0; i < N; i++)
+    {
+        cout << arr[i] << "\t";
+    }
+
     //начинаем сливать подмассивы
     while (runs.size()>1)
     {
@@ -118,9 +125,10 @@ int main()
         runs.pop_back();
     }
 
+    cout << "\n\nSorted array:" << endl;
     for (int i = 0; i < N; i++)
     {
-        cout << arr[i] << "|";
+        cout << arr[i] << "\t";
     }
 
 
