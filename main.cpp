@@ -114,7 +114,8 @@ int main()
                 second_ind++;
             }
         }
-
+        runs[(runs.size()-2)].length+=runs.end()->length;
+        runs.pop_back();
     }
 
     for (int i = 0; i < N; i++)
