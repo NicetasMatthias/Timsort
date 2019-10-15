@@ -26,7 +26,7 @@ int main()
     cout << "Unsorted array:" << endl;
     for (int i = 0; i < N; i++)
     {
-        arr[i]=rand(); //заполняем рандомом
+        arr[i]=rand()%10000; //заполняем рандомом
         cout << arr[i] << "\t";
     }
     minrun=minRunLength(N);
